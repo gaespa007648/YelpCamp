@@ -1,30 +1,30 @@
 <% layout('layout/boilerplate') %>
 <div class="col-6 offset-3">
     <h1 class="text-center">Edit Campground</h1>
-    <form action="/campground/<%= campground._id  %>?_method=PUT" method="post">
+    <form action="/campground/<%= campground._id  %>?_method=PUT" method="post" novalidate class="needs-validation">
         <div class="mb-3">
             <label for="campgroundTitle" class="form-label">Title</label>
-            <input type="text" class="form-control" id="campgroundTitle" name="campground[title]" value=<%= campground.title %>>
+            <input type="text" class="form-control" id="campgroundTitle" name="campground[title]" value=<%= campground.title %> required>
         </div>
         <div class="mb-3">
             <label for="campgroundLocation" class="form-label">Location</label>
-            <input type="text" class="form-control" id="campgroundLocation" name="campground[location]" value=<%= campground.location  %>>
+            <input type="text" class="form-control" id="campgroundLocation" name="campground[location]" value=<%= campground.location  %> required>
         </div>
         <div class="mb-3">
             <label for="campgroundPrice" class="form-label">Price</label>
             <div class="input-group">
                 <span class="input-group-text" id="price-label">$</span>
                 <input type="text" class="form-control" id="campgroundPrice" name="campground[price]"
-                    aria-describedby="price-label" value=<%= campground.price  %>>
+                    aria-describedby="price-label" value=<%= campground.price  %> required>
             </div>
         </div>
         <div class="mb-3">
             <label for="campgroundDescription" class="form-label">Description</label>
-            <input type="text" class="form-control" id="campgroundDescription" name="campground[description]" value=<%= campground.description  %>>
+            <input type="text" class="form-control" id="campgroundDescription" name="campground[description]" value=<%= campground.description  %> required>
         </div>
         <div class="mb-3">
             <label for="campgroundImage" class="form-label">Image Url</label>
-            <input type="text" class="form-control" id="campgroundImage" name="campground[image]" value=<%= campground.image %>>
+            <input type="text" class="form-control" id="campgroundImage" name="campground[image]" value=<%= campground.image %> required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
