@@ -16,7 +16,7 @@
     "express": "^4.17.2",
     "joi": "^17.5.0",
     "method-override": "^3.0.0",
-    "mongoose": "^6.1.5",
+    "mongoose": "^6.1.6",
     "node-fetch": "^2.6.6",
     "unsplash-js": "^7.0.15"
   }
