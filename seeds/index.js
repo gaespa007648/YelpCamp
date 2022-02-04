@@ -25,6 +25,7 @@ const seedDB = async ()=>{
     for(let i=0; i<dataLength; i++){
         let rand = Math.floor(Math.random()*cities.length);
         let newCamp = new Campground({
+            author: '61fcbccdf77f006bb6747162',
             title: `${sample(descriptors)} ${sample(places)}`,
             location: `${cities[rand].city}, ${cities[rand].state}`,
             price: Math.floor(Math.random()*1000+10),
